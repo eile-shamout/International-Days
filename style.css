@@ -121,7 +121,7 @@ ul{
     transition : opacity 0.5s;
 }
 .content-work .item ul{
-    padding:0 10px 10px 10px;
+    padding:0 0 0 5px;
     list-style: none;
 }
 .content-work .item ul li{
@@ -154,7 +154,10 @@ ul{
     background: #A17D71;
 }
 
-
+.title_desc{
+    display: flex;
+    justify-content:end;
+}
 
 
 .controll-box{
@@ -243,6 +246,11 @@ ul{
         justify-content: center;
         text-align: center;
     }
+    .title_desc{
+        width:100%;
+        text-align: left;
+        justify-content:start;
+    }
     .month-name{
         max-width: 300px;
         grid-area: month-name;
@@ -271,27 +279,60 @@ ul{
 
 
 .footer{
-    height:260px;
-    z-index: 10000000;
     margin:20px 0 0 0;
     position: relative;
     overflow: hidden;
+    height:260px;
+    transition: height 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: path('M 0 50, L 100 20 , L 350 50 , L 600 20 , L 1000 50 , L 1920 0 , L 2000 2000 ,L 0 2000');
+    background-color: #ffffff;
 }
-.svgPath{
-    position: relative;
+.footer:hover{
+    cursor: pointer;
+}
+.footer .footer-background{
+    position: absolute;
+    z-index: -1;
     top:0;
 }
-.cls-1 {
-    fill: #f4ebe4;
+.footer .footer-background img{
+    width: 1920px;
 }
 .footer-content{
     position: absolute;
-    bottom:30px;
+    bottom:0;
+    transition: all 0.5s 1s;
     display: flex;
-    align-items: center;
+    align-items: end;
     width:100%;
-    height:100px;
-    z-index: 1000000;
+    height:fit-content;
+    padding:0 0 30px 0;
+}
+.about-desc{
+    font-size: 20px;
+    margin:0 auto 50px auto;
+    padding:0 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s 1s;
+    color:#65473D;
+    text-align: center;
+}
+@media screen and (max-width:768px){
+    .about-desc{
+        padding:0 10px;
+    }
+}
+.about-desc .title{
+    margin:0 0 30px 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color:#65473D;
+    text-transform: uppercase;
 }
 .footer-content .row{
     display: flex;

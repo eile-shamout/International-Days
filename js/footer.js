@@ -11,21 +11,24 @@ footer.addEventListener("click",function(){
         }else{
             footer.style.height=aboutDesc.clientHeight*1.8+"px";
         }
-        footerContent.style.bottom="initial";
         aboutDesc.style.visibility="visible";
         aboutDesc.style.opacity="1";
-        console.log(aboutDesc.clientHeight);
         setTimeout(() => {
             footer.style.cursor="initial";
-            window.scrollTo(0,1500);
-        }, 400);
+            footer.style.alignItems="center";
+            if (windowWidth>=768){
+                window.scrollTo(0,1200);
+            }else{
+                window.scrollTo(0,850);
+            }
+        }, 500);
     }else{
         state=0;
-        window.scrollTo(0,0);
+        window.scrollTo(0,100);
         setTimeout(() => {
-            footer.style.cursor="pointer";
+            footer.style.alignItems="end";
             footer.style.height="260px";
-            footerContent.style.bottom="30px";
+            footerContent.style.bottom="0px";
             aboutDesc.style.visibility="hidden";
             aboutDesc.style.opacity="0";
         }, 500);

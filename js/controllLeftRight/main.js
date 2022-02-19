@@ -69,7 +69,9 @@ monthNameItem.forEach((element,i)=> {
 function cardTarget(i){
     var card=document.querySelectorAll(".content-work .item");
     card.forEach((ele,i)=>{
-        ele.style.opacity='0.6';
+        if (i!=9){
+            ele.style.opacity='0.6';
+        }
         ele.style.borderRadius='10px';
         if (i<month){
             ele.style.opacity='0.3';

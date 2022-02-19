@@ -287,30 +287,51 @@ ul{
     margin:20px 0 0 0;
     position: relative;
     overflow: hidden;
-    height:260px;
-    transition: height 0.8s;
-    display: flex;
-    align-items: end;
+    display: grid;
+    grid-template-columns: auto;
     justify-content: center;
+    align-items: center;
+    height:130px;
+    transition: height 0.8s;
     clip-path: path('M 0 50, L 100 20 , L 350 50 , L 600 20 , L 1000 50 , L 1920 0 , L 2000 2000 ,L 0 2000');
     background-color: #ffffff;
+    padding:60px 0 0 0;
 }
-.footer:hover{
+.about-btn{
+    width:fit-content;
+    height:fit-content;
+    background-color: #65473D;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin: auto;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color:#fff;
     cursor: pointer;
+    font-size: 14px;
+    padding:15px;
+    box-shadow: 0 0 2px black;
+    transition: all 0.3s;
+}
+.about-btn:hover{
+    background-color: #3d2b25;
 }
 .footer-content{
-    display: flex;
+    display: none;
+    display: grid;
     width:100%;
     height:fit-content;
     padding:0 0 30px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s 1.2s;
 }
 .about-desc{
     font-size: 20px;
     margin:0 auto 50px auto;
     padding:0 50px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s 1s;
     color:#65473D;
     text-align: center;
 }
@@ -338,7 +359,7 @@ ul{
 
 .developer{
     display: grid;
-    grid-template-areas: 'title title title''eile symbol abdo';
+    grid-template-areas: 'title''eile-abdo';
     text-align: center;
     justify-content: center;
 }
@@ -346,27 +367,24 @@ ul{
     grid-area: title;
     text-align: center;
 }
-.developer .eile{
-    grid-area: eile;
+.developer .eile-abdo{
+    grid-area: eile-abdo;
 }
-.developer .abdo{
-    grid-area: abdo;
-}
-.developer .symbol{
-    grid-area: symbol;
-    margin:0 10px;
-}
+
 @media screen and (max-width:768px){
+    .about-btn{
+        font-size:12px;
+        padding:10px;
+    }
     .about-desc{
-        padding:0 10px;
+        margin:50px auto;
+        font-size: 16px;
+        padding:0 20px;
     }
-    .developer{
-        grid-template-areas: 'title''eile''abdo';
+    .about-desc .title{
+        font-size: 25px;
     }
-    .developer .devtitle{
-        text-decoration: underline;
-    }
-    .developer .symbol{
-        display: none;
+    .footer-content .row .col{
+        font-size: 16px !important;
     }
 }

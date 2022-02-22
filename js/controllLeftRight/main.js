@@ -71,6 +71,7 @@ function cardTarget(i){
     card.forEach((ele,i)=>{
         if (i!=9){
             ele.style.opacity='0.6';
+            card[i].style.backgroundColor='#F4EBE4';
         }
         ele.style.borderRadius='10px';
         if (i<month){
@@ -79,6 +80,9 @@ function cardTarget(i){
     })
     card[i].style.opacity='1';
     card[i].style.borderRadius='0';
+    if (i!=9){
+        card[i].style.backgroundColor='#fff';
+    }
 }
 
 // Highlight the name of the month clicked

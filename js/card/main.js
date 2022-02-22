@@ -65,6 +65,7 @@ const mouseMoveHandler=function(e) {
 function tergetItem(){
     var recentWorkItem=document.querySelectorAll(".content .recent-work .content-work .scroll-x .item");
     var monthNameTerget=document.querySelectorAll(".controll-box .month-name .monthContent .month-item");
+    recentWorkItem[month].style.backgroundColor='#fff';
     recentWorkItem[month].style.borderRadius='0';
     recentWorkItem[month].style.opacity='1';
     monthNameTerget[month].style.opacity='1';

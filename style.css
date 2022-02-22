@@ -33,7 +33,12 @@ body{
     padding:30px 50px;
     /* background-color: red; */
 }
-
+@media screen and (max-width:550px){
+    .head{
+        padding:30px 20px;
+        /* background-color: red; */
+    }
+}
 
 .bg-opacity{
     position: absolute;
@@ -116,8 +121,8 @@ ul{
     padding:20px;
     overflow: hidden;
     color:#A17D71;
-    background-color: white;
-    opacity: 0.7;
+    background-color: #F4EBE4;
+    opacity: 0.5;
     transition : opacity 0.5s;
 }
 .content-work .item:nth-child(10){
@@ -294,7 +299,8 @@ ul{
     height:130px;
     transition: height 0.8s;
     clip-path: path('M 0 50, L 100 20 , L 350 50 , L 600 20 , L 1000 50 , L 1920 0 , L 2000 2000 ,L 0 2000');
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background-color: #F4EBE4;
     padding:60px 0 0 0;
 }
 .about-btn{
@@ -323,10 +329,10 @@ ul{
     display: grid;
     width:100%;
     height:fit-content;
-    padding:0 0 30px 0;
+    padding:4vw 0 4vw 0;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s 1.2s;
+    transition: all 0.5s;
 }
 .about-desc{
     font-size: 20px;
@@ -386,5 +392,73 @@ ul{
     }
     .footer-content .row .col{
         font-size: 16px !important;
+    }
+}
+
+
+.remined-me{
+    display: grid;
+    grid-template-areas: 'label label''email btn';
+    margin:50px auto;
+}
+.remined-me label{
+    grid-area: label;
+    display: block;
+    font-size: 22px;
+    color:#65473D;
+}
+.remined-me .email{
+    grid-area: email;
+    height:45px;
+    width:450px;
+    border-radius: 15px;
+    margin:0 10px 0 0;
+    outline: 0;
+    border:0;
+    box-shadow: 0 0 2px #464646;
+    padding:0 0 0 20px;
+    color: #65473D;
+}
+.remined-me .btn{
+    grid-area: btn;
+    font-size: 18px;
+    background-color: #65473D;
+    color: #fff;
+    border-radius: 15px;
+    padding:10px;
+    height: 45px;
+    width:fit-content;
+    outline: 0;
+    border:0;
+    box-shadow: 0 0 2px #A17D71;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+@media screen and (max-width:650px){
+    .remined-me{
+        display: grid;
+        grid-template-areas: 'label''email''btn';
+        margin:50px auto 0 auto;
+        width: 70%;
+        padding:0 2vw;
+    }
+    .remined-me label{
+        font-size: 18px;
+    }
+    .remined-me .email{
+        height:40px;
+        width:100%;
+        padding:0 0 0 2vw;
+    }
+    .remined-me .btn{
+        font-size: 16px;
+        height:40px;
+        margin-top:10px;
+    }
+}
+@media screen and (max-width:400px){
+    .remined-me{
+        width: 90%;
     }
 }

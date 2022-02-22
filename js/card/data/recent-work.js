@@ -3,7 +3,24 @@ let recentWorkData=[
         id:0,
         month:"January",
         monthDate:1,
-        International_days:[]
+        International_days:[
+            {
+                date:10,
+                name:"National umbrella day",
+            },
+            {
+                date:22,
+                name:"Love your pet day",
+            },
+            {
+                date:27,
+                name:"National Pokémon day",
+            },
+            {
+                date:29,
+                name:"Flower design day",
+            },
+        ]
     },
     {
         id:1,
@@ -218,7 +235,10 @@ let recentWorkData=[
         id:9,
         month:"October",
         International_days:[
-            
+            {
+                date:1,
+                name:'INKTOBER'
+            }
         ]
     },
     {
@@ -246,6 +266,22 @@ let recentWorkData=[
             {
                 date:6,
                 name:"Disney day",
+            },
+            {
+                date:9,
+                name:"World Techno Day",
+            },
+            {
+                date:26,
+                name:"National Thank You Note Day",
+            },
+            {
+                date:29,
+                name:"Tick Tock Day",
+            },
+            {
+                date:31,
+                name:"No International Day",
             },
         ]
     },

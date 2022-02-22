@@ -21,6 +21,8 @@ window.addEventListener("load", function(){
                         </tr>
                     </table>
                 </li>`;
+            }else if(i==9){
+                body+=`<li style=''><h5>${ele1['name']}</h5></li>`;
             }else{
                 if (targetDay>ele1['date'] && i==targetMonth){
                     body+=`<li style='text-decoration:line-through;'>

@@ -13,7 +13,7 @@ window.addEventListener("load", function(){
         ele.International_days.forEach((ele1) => {
             if (targetMonth>i){
                 body+=`
-                <li style='text-decoration:line-through'>
+                <li style='text-decoration:line-through;'>
                     <table>
                         <tr>
                             <td class='day-date'>${ele1['date']}</td>
@@ -59,7 +59,7 @@ window.addEventListener("load", function(){
         
         if (targetMonth>ele.id){
             recentWorkContent.innerHTML+=`
-            <div class="item">
+            <div class="item" style="opacity:0.3">
             <h2>${ele.month}</h2>
             <ul>${body}</ul>
             </div>`;

@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
                         </table>
                     </li>`;
                 }else{
-                    if (targetDay===ele1['date']){
+                    if (targetDay===ele1['date'] && targetMonth===i){
                         body+=`<li style='color:#65473D;font-weight:600'>
                         <table>
                             <tr>

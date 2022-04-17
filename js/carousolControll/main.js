@@ -53,7 +53,6 @@ leftControll.addEventListener('click',function(){
 
 // Hover over the names of the months in the Navbar to set an event
 monthNameItem.forEach((element,i)=> {
-    
     element.addEventListener('click',function(){
         val=266.5*i;
         recentWork.style.scrollBehavior = "smooth";
@@ -73,15 +72,23 @@ function cardTarget(i){
             ele.style.opacity='0.6';
             card[i].style.backgroundColor='#F4EBE4';
         }
+      
         ele.style.borderRadius='10px';
         if (i<month){
             ele.style.opacity='0.3';
         }
+
+        card[3].style.backgroundColor='#65473D';
+        card[3].style.opacity='1';
     })
     card[i].style.opacity='1';
     card[i].style.borderRadius='0';
     if (i!=9 && i!=3){
         card[i].style.backgroundColor='#fff';
+    }
+    if (i==3){
+        card[i].style.backgroundColor='#fff';
+        card[i].style.opacity='1';
     }
 }
 

@@ -68,6 +68,9 @@ function tergetItem(){
     if (month!==9 || month!==3){
         recentWorkItem[month].style.backgroundColor='#fff';
     }
+    if (month==3){
+        recentWorkItem[month].style.color='#A17D71';
+    }
     recentWorkItem[month].style.borderRadius='0';
     recentWorkItem[month].style.opacity='1';
     monthNameTerget[month].style.opacity='1';
